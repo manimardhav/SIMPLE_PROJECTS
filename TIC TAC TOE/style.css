@@ -1,0 +1,121 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e4e4e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; /* Remove default margin */
+}
+
+.container {
+    position: relative; /* For positioning winner message */
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 24px;
+    color: #555;
+}
+
+.symbol-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 5px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    border:none; 
+}
+.symbol-button:hover {
+   background-color:#2980b9; 
+   transform : scale(1.05); 
+   transition : background-color .3s , transform .2s ; 
+}
+
+#currentPlayerDisplay {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse; 
+    margin: auto; /* Center the table */
+}
+
+td {
+    width: 80px; /* Increased cell size */
+    height: 80px; /* Increased cell size */
+    text-align: center;
+    font-size: 48px; /* Increased font size for better visibility */
+    cursor: pointer;
+    border: 2px solid #ccc; /* Thicker border */
+    background-color: #fafafa; /* Light background for cells */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+td:hover {
+    background-color: #e1e1e1; /* Darker hover effect */
+}
+
+td.X {
+   color: #3498db; /* Blue color for X */
+   animation: fadeIn 0.5s ease-in-out; /* Fade-in animation for X */
+}
+
+td.O {
+   color: #e74c3c; /* Red color for O */
+   animation: fadeIn 0.5s ease-in-out; /* Fade-in animation for O */
+}
+
+/* Winning Line Animation */
+@keyframes winningLine {
+   from { background-color: rgba(52,152,219,0.5); }
+   to { background-color: rgba(52,152,219,1); }
+}
+
+.winner-message {
+   position: absolute;
+   top: -10%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-size: 24px;
+   color: #333;
+   background-color: rgba(255, 255, 255, 0.9);
+   padding: 20px;
+   border-radius: 10px;
+}
+
+.restart-button {
+   margin-top : 20px ; 
+   padding : 10px 20px ; 
+   font-size : 18px ; 
+   background-color : #3498db ; 
+   color : white ; 
+   border-radius : 5px ; 
+}
+.restart-button:hover {
+   background-color:#2980b9; 
+   transform : scale(1.05); 
+   transition : background-color .3s , transform .2s ; 
+}
+
+.scoreboard {
+   margin-top : 20px ; 
+}
+
+/* Fade-in animation for cells */
+@keyframes fadeIn {
+   from { opacity: 0; }
+   to { opacity: 1; }
+}
